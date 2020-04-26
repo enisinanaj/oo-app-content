@@ -44,7 +44,7 @@ function add_plugin_menu(){
 	add_menu_page( 'App Content', 'App Content', 'manage_options', 'app-content', 'app_content_init' );
 	wp_enqueue_style('jqueryuicss', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', false, '1.1', 'all');
 	wp_enqueue_script('jqueryui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', false, '1.2', 'all');
-	wp_enqueue_script( 'main', plugin_dir_url( __FILE__ ) . 'js/main.appcontent.js', array("jqueryui"), '1.10.28', 'all');
+	wp_enqueue_script( 'main-content', plugin_dir_url( __FILE__ ) . 'js/main.appcontent.js', array("jqueryui"), '1.10.30', 'all');
 }
 
 

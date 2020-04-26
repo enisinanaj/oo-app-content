@@ -11,7 +11,7 @@ function add_stats_plugin_menu(){
 	add_menu_page( 'App Stats', 'App Stats', 'manage_options', 'app-stats', 'app_stats_init' );
 	wp_enqueue_style('jqueryuicss', '//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', false, '1.1', 'all');
 	wp_enqueue_script('jqueryui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', false, '1.2', 'all');
-	wp_enqueue_script( 'main', plugin_dir_url( __FILE__ ) . 'js/main.appstats.js', array("jqueryui"), '1.10.10', 'all');
+	wp_enqueue_script( 'app-stats', plugin_dir_url( __FILE__ ) . 'js/main.appstats.js', array("jqueryui"), '1.10.10', 'all');
 }
 
 
