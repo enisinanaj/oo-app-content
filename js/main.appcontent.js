@@ -42,7 +42,6 @@ jQuery(() => {
 
     loadSondaggioGiorno()
     handleSalvaSondaggioGiorno()
-
 })
 
 function loadConsensi() {

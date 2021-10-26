@@ -3,7 +3,18 @@ jQuery(() => {
     loadFraseDelGiorno()
     loadCuriositaDelGiorno()
     loadSondaggioDelGiorno()
+    loadStatUtenti();
 })
+
+function loadStatUtenti() {
+    var db = firebase.firestore();
+    db.collection("Utenti").where('commerciale3PartiAccettato', '==', true).get()
+        .then(ref => jQuery("#totale_utenti_comm").html(ref.size));
+
+    db.collection("Utenti").get().then((querySnapshot) => {
+        jQuery("#totale_utenti").html(querySnapshot.size);
+    });
+}
 
 function loadFraseDelGiorno() {
     var db = firebase.firestore();
